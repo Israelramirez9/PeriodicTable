@@ -1,5 +1,5 @@
-// esta funcion devuelve la posicion de un elemento de la tabala periodica de acuerdo a su numero atomico
-
+/*
+esta función retorna un objeto con la posicion en row y column y recibe por parámetro el número atómico  */
 function getPositionOnPeriodicTabletByAtomicNumber(atomicNumber) {
 
 
@@ -97,11 +97,13 @@ function getPositionOnPeriodicTabletByAtomicNumber(atomicNumber) {
     return null
 }
 
-
-
-
-
-
+ /*
+ esta función se encarga de recibir por parámetro un array de objetos 
+ posteriormente crea una matrix vacía de null
+ posteriormente llama a la funcion getPositionOnPeriodicTabletByAtomicNumber() le pasa el numero atomico del elemento por parametro
+ y obtiene un objeto con la posicion, posteriormente se encarga de llenar la matrix con el array de objetos de acuerdo a la posicion obtenida 
+ de la funcion  getPositionOnPeriodicTabletByAtomicNumber()
+ por ultimo retorna la matrix cargada con la informacion de cada elemento en forma de objeto*/
 function getPeriodicTable(table) {
 
     const matrix = [];
@@ -115,11 +117,7 @@ function getPeriodicTable(table) {
         for (let j = 0; j < columns; j++) {
             matrix[i].push(null);
         }
-    }
-
-
-
-
+    } 
     for (let i = 0; i < table.length; i++) {
 
         const element = table[i];
@@ -141,37 +139,3 @@ function getPeriodicTable(table) {
 
 export { getPeriodicTable }
 
-
-
-/*
-       if (atomicNumber === 1) {
-           matrix[0][0] = element;
-       } else if (atomicNumber === 2) {
-           matrix[0][17] = element;
-       } else if (atomicNumber >= 3 && atomicNumber <= 4) {
-           matrix[1][atomicNumber - 3] = element;
-       } else if (atomicNumber >= 5 && atomicNumber <= 10) {
-           matrix[1][atomicNumber + 7] = element;
-       } else if (atomicNumber >= 11 && atomicNumber <= 12) {
-           matrix[2][atomicNumber - 11] = element;
-       } else if (atomicNumber >= 13 && atomicNumber <= 18) {
-           matrix[2][atomicNumber - 1] = element;
-       } else if (atomicNumber >= 19 && atomicNumber <= 57) {
-           matrix[atomicNumber % 18 === 0 ? index++ : index][(atomicNumber - 1) % 18] = element;
-       } else if (atomicNumber >= 58 && atomicNumber <= 71) {
-           matrix[7][atomicNumber - 54] = element;
-       } else if (atomicNumber >= 72 && atomicNumber <= 86) {
-           matrix[index][atomicNumber - 69] = element;
-       } else if (atomicNumber >= 87 && atomicNumber <= 89) {
-           matrix[6][atomicNumber - 87] = element;
-       } else if (atomicNumber >= 90 && atomicNumber <= 103) {
-           matrix[8][atomicNumber - 86] = element;
-       } else {
-           matrix[6][atomicNumber - 101] = element;
-       }
-
-
-
-   
-   console.log(matrix);
-  */
