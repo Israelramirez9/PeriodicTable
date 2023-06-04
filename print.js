@@ -25,15 +25,15 @@ esta función recibe por parámetro el ID de la fila y el objeto element
 y se encarga de imprimir en HTML el código <td></td> de cada elemento no null de la tabla periodica
 */
 function printElementColumn(rowID, element) {
-    const rowElement = document.getElementById(rowID);
-    rowElement.innerHTML += `<td style="margin: 0 auto; border: solid black 1px;" >${element.symbol}</td>`;
+    const rowElement = document.getElementById(rowID);    
+    rowElement.innerHTML += `<td title="${element.name}" class="${element.groupBlock}">${element.symbol}</td>`;   
 }
 /*
 esta función recibe por parametro el id de cada fila o etiqueta <tr></tr> y se encargará de imprimir los <td>  vacios que contendrán los elementos
 nulos de la tabla periodica, esto de acuerdo al formato diseñado de la tbla periodica */
 function printEmptyColumn(rowID) {
     const rowElement = document.getElementById(rowID);
-    rowElement.innerHTML += `<td style="border: 0"></td>`;
+    rowElement.innerHTML += `<td style="border: 0" class="null"></td>`;
 }
 /*
 esta función se encarga de imprimir las filas o etiquetas <tr> de la tabla en HTML recibe por parametro el string ID de la tabla

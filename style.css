@@ -1,0 +1,117 @@
+body{
+    background-image: url("imagenfondo.jpg");
+}
+td{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(161, 240, 70);
+    border:white solid 1px;
+    color:white;
+    text-align: center;
+}
+table{
+    margin: 0 auto;
+   
+}
+h1{
+    text-align: center;
+    color: white;
+}
+.null{
+    background-color: transparent;
+}
+.noble.gas{
+    background-color: aqua;
+}
+.halogen{
+    background-color: rgb(145, 72, 212);
+}
+.nonmetal{
+    background-color: rgb(58, 58, 241);
+}
+.alkali.metal{
+    background-color: rgb(245, 195, 104);
+}
+.alkaline.earth.metal{
+    background-color: rgb(132, 155, 105);
+}
+.transition.metal{
+    background-color: rgb(62, 255, 88);
+}
+.metal{
+    background-color: rgb(247, 131, 131);
+}
+.metalloid{
+    background-color: greenyellow;
+}
+.lanthanoid{
+    background-color: rgb(241, 241, 66);
+}
+.actinoid{
+    background-color: brown;
+}
+main{
+    display: flex;
+}
+.block1{
+    width: 20%;
+    font-family: 'Times New Roman', Times, serif;
+    height: 50%;
+    
+    
+    
+}
+.block1 > div{
+    padding: 10px 0;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.block2{
+    width: 80%;
+}
+.block2 *{
+    border-radius: 10px;
+    color: black;
+}
+#nometal{
+    
+    background-color:rgb(58, 58, 241);
+    
+}
+#gasnoble{
+    background-color: aqua;
+   
+}
+#halogeno{
+background-color: rgb(145, 72, 212);
+
+}
+#alcalino{
+    background-color: rgb(245, 195, 104);
+    
+}
+#metaldetransicion{
+    background-color: rgb(62, 255, 88);
+    
+}
+#metal{
+background-color: rgb(247, 131, 131);
+
+}
+#metaloide{
+    background-color: greenyellow;
+    
+}
+#alcalinoterreo{
+    background-color: rgb(132, 155, 105);
+}
+#lantanidos{
+background-color: rgb(241, 241, 66);
+}
+#actinidos{
+background-color: brown;
+}

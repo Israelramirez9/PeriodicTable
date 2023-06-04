@@ -122,7 +122,7 @@ function getPeriodicTable(table) {
 
         const element = table[i];
         const atomicNumber = parseInt(element.atomicNumber);
-
+        
         const position = getPositionOnPeriodicTabletByAtomicNumber(atomicNumber);
 
         // si la posicion es nula continua con el siguiente elemento y no toma en cuenta al null
