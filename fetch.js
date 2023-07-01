@@ -1,5 +1,5 @@
 const API_ENDPOINT = "https://neelpatel05.pythonanywhere.com/";
-
+import { elements } from "./data.js";
 /*
 el fetch actua como promesa por parametro tiene la url de una pagina u API .json
 fetch("URL").then(response=>response.json()).then(obj=>console.log(obj))
@@ -19,13 +19,14 @@ ej: function getMessage(){return "hola"} --------> devuelve un string
     async function getMessage(){return "hola"} -----> devuelve una promesa que la resuelve con un string  
      */
 async function fetchTable() {   // toda funcion async devuelve una promesa
-    const response = await fetch(API_ENDPOINT);
+    return elements;
+    // const response = await fetch(API_ENDPOINT);
     /**
      * La mejor manera seria con "await response.json();" porque ya lo transforma en un objeto
      */
-    const responseText = await response.text();
-    const table = JSON.parse(responseText);
-    return table
+    // const responseText = await response.text();
+    // const table = JSON.parse(responseText);
+    // return table
 
 }
 /*
@@ -33,4 +34,6 @@ en general, el uso de fetch(API_ENDPOINT) retorna una promesa,
 se hace uso de dos await, el primero es para obtener la data de la promesa y el segundo para procesarla , haciendo uso del método text()
 lo convierte en un string y posteriormente este string en formato json es transformado en un array de objetos con el metodo JSON.parse()
 finalmente la función retorna un array de objetos pero al tratarse de una función asíncrona retorna una promesa */
+
+
 export { fetchTable };

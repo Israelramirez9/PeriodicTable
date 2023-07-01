@@ -1,5 +1,8 @@
 body{
     background-image: url("imagenfondo.jpg");
+    margin:0;
+    width: 100vw;   
+    overflow-x: hidden;
 }
 td{
     height: 50px;
@@ -14,6 +17,7 @@ table{
    
 }
 h1{
+    margin: 0;
     text-align: center;
     color: white;
 }
@@ -52,6 +56,8 @@ h1{
 }
 main{
     display: flex;
+    overflow: auto;    
+    padding: 1rem;
 }
 .block1{
     width: 20%;
